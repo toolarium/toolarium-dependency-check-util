@@ -1,0 +1,2849 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "9.0.6",
+        "dataSource": [
+            {
+                "name": "NVD API Last Checked",
+                "timestamp": "2024-01-01T07:56:51+01"
+            },
+            {
+                "name": "NVD API Last Modified",
+                "timestamp": "2024-01-01T06:15:08Z"
+            }
+        ]
+    },
+    "projectInfo": {
+        "name": "root project 'toolarium-system-command'",
+        "groupID": "com.github.toolarium",
+        "artifactID": "toolarium-system-command",
+        "version": "0.9.1-SNAPSHOT",
+        "reportDate": "2024-01-01T12:41:44.823341200Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
+        }
+    },
+    "dependencies": [
+        {
+            "isVirtual": false,
+            "fileName": "jackson-annotations-2.15.3.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-annotations\\2.15.3\\79baf4e605eb3bbb60b1c475d44a7aecceea1d60\\jackson-annotations-2.15.3.jar",
+            "md5": "f478f693731e4a2f0f0d3c7bba119b32",
+            "sha1": "79baf4e605eb3bbb60b1c475d44a7aecceea1d60",
+            "sha256": "aae865c3d88256d61b11523cb1e88bd48d5b9ad5855fa1fc859504fd2204708a",
+            "description": "Core annotations used for value types, used by Jackson data binding package.\n  ",
+            "license": "The Apache Software License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0.txt",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-annotations"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-annotations"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.core.jackson-annotations"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor-Id",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "specification-vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-annotations"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "Jackson-annotations"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-parent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "FasterXML/jackson"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "hint analyzer",
+                        "name": "product",
+                        "value": "java8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "hint analyzer",
+                        "name": "product",
+                        "value": "modules"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Bundle-Name",
+                        "value": "Jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.core.jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "Jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "specification-title",
+                        "value": "Jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "Jackson-annotations"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-parent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "FasterXML/jackson"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Bundle-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "2.15.3"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.15.3",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.15.3?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ],
+            "vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:fasterxml:jackson-modules-java8:2.15.3:*:*:*:*:*:*:*",
+                    "confidence": "LOW"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "jackson-core-2.15.3.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-core\\2.15.3\\60d600567c1862840397bf9ff5a92398edc5797b\\jackson-core-2.15.3.jar",
+            "md5": "c86c75392bf138d54d2a219bb1d0cbcd",
+            "sha1": "60d600567c1862840397bf9ff5a92398edc5797b",
+            "sha256": "51fab7aad51ed588482edc507fd542747936c5094d1ab76ed21ddb63b96b610d",
+            "description": "Core Jackson processing abstractions (aka Streaming API), implementation for JSON",
+            "license": "The Apache Software License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0.txt",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "base"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "com"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "json"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson-core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.core.jackson-core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor-Id",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "specification-vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "Jackson-core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-base"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "FasterXML/jackson-core"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "hint analyzer",
+                        "name": "product",
+                        "value": "java8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "hint analyzer",
+                        "name": "product",
+                        "value": "modules"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "base"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "com"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "json"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Bundle-Name",
+                        "value": "Jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.core.jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "Jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "specification-title",
+                        "value": "Jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "Jackson-core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-base"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "FasterXML/jackson-core"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Bundle-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "2.15.3"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.15.3",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/com.fasterxml.jackson.core/jackson-core@2.15.3?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ],
+            "vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:fasterxml:jackson-modules-java8:2.15.3:*:*:*:*:*:*:*",
+                    "confidence": "LOW"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "jackson-databind-2.15.3.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-databind\\2.15.3\\a734bc2c47a9453c4efa772461a3aeb273c010d9\\jackson-databind-2.15.3.jar",
+            "md5": "5f453c55f127690fa8491ce347aa055c",
+            "sha1": "a734bc2c47a9453c4efa772461a3aeb273c010d9",
+            "sha256": "c3c53333a2172a80678bda1803e39cff45bec6ae3e9c7d4f44a81ec4e2ab18dc",
+            "description": "General data-binding functionality for Jackson: works on core streaming API",
+            "license": "The Apache Software License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0.txt",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "databind"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.core.jackson-databind"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor-Id",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "specification-vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-base"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "FasterXML/jackson"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "hint analyzer",
+                        "name": "product",
+                        "value": "java8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "hint analyzer",
+                        "name": "product",
+                        "value": "modules"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Bundle-Name",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.core.jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "specification-title",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "jackson-databind"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-base"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "FasterXML/jackson"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Bundle-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "2.15.3"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.3",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.3?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ],
+            "vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:fasterxml:jackson-databind:2.15.3:*:*:*:*:*:*:*",
+                    "confidence": "HIGHEST",
+                    "url": "https://nvd.nist.gov/vuln/search/results?form_type=Advanced&results_type=overview&search_type=all&cpe_vendor=cpe%3A%2F%3Afasterxml&cpe_product=cpe%3A%2F%3Afasterxml%3Ajackson-databind&cpe_version=cpe%3A%2F%3Afasterxml%3Ajackson-databind%3A2.15.3"
+                }
+            ],
+            "vulnerabilities": [
+                {
+                    "source": "NVD",
+                    "name": "CVE-2023-35116",
+                    "severity": "MEDIUM",
+                    "cvssv3": {
+                        "baseScore": 4.7,
+                        "attackVector": "LOCAL",
+                        "attackComplexity": "HIGH",
+                        "privilegesRequired": "LOW",
+                        "userInteraction": "NONE",
+                        "scope": "UNCHANGED",
+                        "confidentialityImpact": "NONE",
+                        "integrityImpact": "NONE",
+                        "availabilityImpact": "HIGH",
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": "1.0",
+                        "impactScore": "3.6",
+                        "version": "3.1"
+                    },
+                    "cwes": [
+                        "CWE-770"
+                    ],
+                    "description": "jackson-databind through 2.15.2 allows attackers to cause a denial of service or other unspecified impact via a crafted object that uses cyclic dependencies. NOTE: the vendor's perspective is that this is not a valid vulnerability report, because the steps of constructing a cyclic data structure and trying to serialize it cannot be achieved by an external attacker.",
+                    "notes": "",
+                    "references": [
+                        {
+                            "source": "cve@mitre.org",
+                            "url": "https://github.com/FasterXML/jackson-databind/issues/3972",
+                            "name": "ISSUE_TRACKING"
+                        }
+                    ],
+                    "vulnerableSoftware": [
+                        {
+                            "software": {
+                                "id": "cpe:2.3:a:fasterxml:jackson-databind:*:*:*:*:*:*:*:*",
+                                "vulnerabilityIdMatched": "true",
+                                "versionEndExcluding": "2.16.0"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "jackson-datatype-jsr310-2.15.3.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.datatype\\jackson-datatype-jsr310\\2.15.3\\4a20a0e104931bfa72f24ef358c2eb63f1ef2aaf\\jackson-datatype-jsr310-2.15.3.jar",
+            "md5": "acd8ae6da000eb831a69b4acdc182b7f",
+            "sha1": "4a20a0e104931bfa72f24ef358c2eb63f1ef2aaf",
+            "sha256": "bea1d78009ebc4e5d54918a3f7aec5da9fbd09f662c191a217ffcf37e8527c5e",
+            "description": "Add-on module to support JSR-310 (Java 8 Date & Time API) data types.",
+            "license": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.datatype"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "datatype"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jsr310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.datatype.jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor-Id",
+                        "value": "com.fasterxml.jackson.datatype"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "specification-vendor",
+                        "value": "FasterXML"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "developer email",
+                        "value": "nicholas@nicholaswilliams.net"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "developer id",
+                        "value": "beamerblvd"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "developer name",
+                        "value": "Nick Williams"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.datatype"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "Jackson datatype: JSR310"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-modules-java8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson.module"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "datatype"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "fasterxml"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jsr310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Bundle-Name",
+                        "value": "Jackson datatype: JSR310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "com.fasterxml.jackson.datatype.jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "Jackson datatype: JSR310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "specification-title",
+                        "value": "Jackson datatype: JSR310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jackson-datatype-jsr310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "developer email",
+                        "value": "nicholas@nicholaswilliams.net"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "developer id",
+                        "value": "beamerblvd"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "developer name",
+                        "value": "Nick Williams"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "com.fasterxml.jackson.datatype"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "Jackson datatype: JSR310"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "jackson-modules-java8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-groupid",
+                        "value": "com.fasterxml.jackson.module"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Bundle-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "2.15.3"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "2.15.3"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.15.3",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.15.3?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ],
+            "vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:fasterxml:jackson-modules-java8:2.15.3:*:*:*:*:*:*:*",
+                    "confidence": "LOW"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "jptools-1.7.10.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\net.sf.jptools\\jptools\\1.7.10\\6edc0aa949c03872aaae7074724bd2f48a02d4d2\\jptools-1.7.10.jar",
+            "md5": "c59267e8aa445a2a4c968f90aac8c0d6",
+            "sha1": "6edc0aa949c03872aaae7074724bd2f48a02d4d2",
+            "sha256": "d6ae78701c80db6299175d8590f59095ff641aec175250e5b12948c7ef123cdc",
+            "projectReferences": [
+                "toolarium-system-command:modelGenerator"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "net.sf.jptools"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-os",
+                        "value": "Windows 10 (10.0), amd64"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-timestamp",
+                        "value": "2023-05-01T11:28:53.326+0200"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "source-compatibility",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "target-compatibility",
+                        "value": "1.8"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-os",
+                        "value": "Windows 10 (10.0), amd64"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-timestamp",
+                        "value": "2023-05-01T11:28:53.326+0200"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "source-compatibility",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "specification-title",
+                        "value": "jptools"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "target-compatibility",
+                        "value": "1.8"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "1.7.10"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "1.7.10"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/net.sf.jptools/jptools@1.7.10",
+                    "confidence": "HIGHEST",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/net.sf.jptools/jptools@1.7.10?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "jxl-2.6.12.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\net.sourceforge.jexcelapi\\jxl\\2.6.12\\7faf62e0697f7a88954622dfe8c8de33ed142ac7\\jxl-2.6.12.jar",
+            "md5": "62f8a643ebd1ffcf891b51778dc37565",
+            "sha1": "7faf62e0697f7a88954622dfe8c8de33ed142ac7",
+            "sha256": "c5c53645ab751288398f30adaec5551879c5ee334d4862ea77b25a386646621c",
+            "projectReferences": [
+                "toolarium-system-command:modelGenerator"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jxl"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jxl"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "net.sourceforge.jexcelapi"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "biff"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jxl"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jxl"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "jxl"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "biff"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "MEDIUM",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jxl"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.6.12"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "2.6.12"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/net.sourceforge.jexcelapi/jxl@2.6.12",
+                    "confidence": "HIGHEST",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/net.sourceforge.jexcelapi/jxl@2.6.12?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "org.jacoco.agent-0.8.9.jar: jacocoagent.jar (shaded: org.jacoco:org.jacoco.agent.rt:0.8.9)",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jacoco\\org.jacoco.agent\\0.8.9\\9af6e948fe6611437a691c4052cc7ff59cfa9a87\\org.jacoco.agent-0.8.9.jar\\jacocoagent.jar\\META-INF/maven/org.jacoco/org.jacoco.agent.rt/pom.xml",
+            "md5": "06f8be91bf1dee590f62342c16f4cb5e",
+            "sha1": "b76c6513056458a597ff2fee17812306d1517b1d",
+            "sha256": "d1e4d1e96612c192aa62af1e4fb053720b74b890d38b5cec03bc4a0fa62b58b2",
+            "description": "JaCoCo Java Agent",
+            "projectReferences": [
+                "toolarium-system-command:jacocoAgent"
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jacoco.agent.rt"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "JaCoCo :: Agent RT"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "org.jacoco.build"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jacoco.agent.rt"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "JaCoCo :: Agent RT"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "org.jacoco.build"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "0.8.9"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/org.jacoco/org.jacoco.agent.rt@0.8.9",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/org.jacoco/org.jacoco.agent.rt@0.8.9?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "org.jacoco.agent-0.8.9.jar: jacocoagent.jar (shaded: org.jacoco:org.jacoco.core:0.8.9)",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jacoco\\org.jacoco.agent\\0.8.9\\9af6e948fe6611437a691c4052cc7ff59cfa9a87\\org.jacoco.agent-0.8.9.jar\\jacocoagent.jar\\META-INF/maven/org.jacoco/org.jacoco.core/pom.xml",
+            "md5": "a289ecd9035330a8892a80e3eb53c046",
+            "sha1": "04abbbb943140ca9f7f6c029eb554c38b7f40c1f",
+            "sha256": "5404f7052765a64374d275367fd9485bb5996b369113c89a8557d8f024810f02",
+            "description": "JaCoCo Core",
+            "projectReferences": [
+                "toolarium-system-command:jacocoAgent"
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jacoco.core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "JaCoCo :: Core"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "org.jacoco.build"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jacoco.core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "JaCoCo :: Core"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "org.jacoco.build"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "0.8.9"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/org.jacoco/org.jacoco.core@0.8.9",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/org.jacoco/org.jacoco.core@0.8.9?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "org.jacoco.agent-0.8.9.jar: jacocoagent.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jacoco\\org.jacoco.agent\\0.8.9\\9af6e948fe6611437a691c4052cc7ff59cfa9a87\\org.jacoco.agent-0.8.9.jar\\jacocoagent.jar",
+            "md5": "e852c5e07bc13ffdc6a68303799f80ad",
+            "sha1": "ad836d1c585c7e1dbf5cf828efa34528d9700303",
+            "sha256": "191734a0b7ef97606e6a09ae584c4acab47eb30fcb4c555d3d440d4e0d71d73d",
+            "projectReferences": [
+                "toolarium-system-command:jacocoAgent"
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jacocoagent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "rt"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "rt"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "automatic-module-name",
+                        "value": "org.jacoco.agent.rt"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Vendor",
+                        "value": "Mountainminds GmbH & Co. KG"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jacocoagent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "internal_4481564"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jacoco"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "rt"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "rt"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "automatic-module-name",
+                        "value": "org.jacoco.agent.rt"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "JaCoCo Java Agent"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "0.8.9"
+                    }
+                ]
+            }
+        },
+        {
+            "isVirtual": false,
+            "fileName": "org.jacoco.agent-0.8.9.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.jacoco\\org.jacoco.agent\\0.8.9\\9af6e948fe6611437a691c4052cc7ff59cfa9a87\\org.jacoco.agent-0.8.9.jar",
+            "md5": "b09c7ffaede51aeb5f351b32ed942082",
+            "sha1": "9af6e948fe6611437a691c4052cc7ff59cfa9a87",
+            "sha256": "c067e29a49063220e75215eff1bc234584ad002e747afdf13a69662be5b0e07d",
+            "description": "JaCoCo Agent",
+            "license": "https://www.eclipse.org/legal/epl-2.0/",
+            "projectReferences": [
+                "toolarium-system-command:jacocoAgent"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "automatic-module-name",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-requiredexecutionenvironment",
+                        "value": "J2SE-1.5"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "originally-created-by",
+                        "value": "Apache Maven Bundle Plugin"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jacoco.agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "JaCoCo :: Agent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "org.jacoco.build"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jacoco"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "automatic-module-name",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Bundle-Name",
+                        "value": "JaCoCo Agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-requiredexecutionenvironment",
+                        "value": "J2SE-1.5"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "org.jacoco.agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "originally-created-by",
+                        "value": "Apache Maven Bundle Plugin"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "jacoco.agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.jacoco"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "JaCoCo :: Agent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "org.jacoco.build"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "0.8.9"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "0.8.9"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "0.8.9"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/org.jacoco/org.jacoco.agent@0.8.9",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/org.jacoco/org.jacoco.agent@0.8.9?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "slf4j-api-2.0.10.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\org.slf4j\\slf4j-api\\2.0.10\\7af762c03f74a463d36d5786ec67006cce865892\\slf4j-api-2.0.10.jar",
+            "md5": "08d65b27994b1cfcbe703d564f6f15f3",
+            "sha1": "7af762c03f74a463d36d5786ec67006cce865892",
+            "sha256": "b7ddb31a515debbddec8e9145e2cf7b197926f40e454376647724f92e6382043",
+            "description": "The slf4j API",
+            "license": "http://www.opensource.org/licenses/mit-license.php",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor",
+                "toolarium-system-command:compileClasspath",
+                "toolarium-system-command:runtimeClasspath"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                },
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                },
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "org.slf4j"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "slf4j"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "21"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "http://www.slf4j.org"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "slf4j.api"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "originally-created-by",
+                        "value": "Apache Maven Bundle Plugin 5.1.9"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.slf4j"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "SLF4J API Module"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "slf4j-parent"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "http://www.slf4j.org"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "9"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "slf4j"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-jdk-spec",
+                        "value": "21"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "bundle-docurl",
+                        "value": "http://www.slf4j.org"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "Bundle-Name",
+                        "value": "SLF4J API Module"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "bundle-symbolicname",
+                        "value": "slf4j.api"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "multi-release",
+                        "value": "true"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "originally-created-by",
+                        "value": "Apache Maven Bundle Plugin 5.1.9"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "artifactid",
+                        "value": "slf4j-api"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "groupid",
+                        "value": "org.slf4j"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "pom",
+                        "name": "name",
+                        "value": "SLF4J API Module"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "parent-artifactid",
+                        "value": "slf4j-parent"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "pom",
+                        "name": "url",
+                        "value": "http://www.slf4j.org"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "2.0.10"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "version",
+                        "value": "2.0.10"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Bundle-Version",
+                        "value": "2.0.10"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "2.0.10"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "pom",
+                        "name": "version",
+                        "value": "2.0.10"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/org.slf4j/slf4j-api@2.0.10",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/org.slf4j/slf4j-api@2.0.10?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        },
+        {
+            "isVirtual": false,
+            "fileName": "toolarium-enum-configuration-1.1.8.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.github.toolarium\\toolarium-enum-configuration\\1.1.8\\b6dae83817a1dbc8e0e05cdeb0c4c8d276edea6f\\toolarium-enum-configuration-1.1.8.jar",
+            "md5": "8f586c6696b475cccc456b4fada3d18f",
+            "sha1": "b6dae83817a1dbc8e0e05cdeb0c4c8d276edea6f",
+            "sha256": "229c718839f70ecde3b97aee0f79847746e1892c3ec7ce32c6fb34c1607063bc",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor",
+                "toolarium-system-command:compileClasspath"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                },
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-system-command@0.9.1-SNAPSHOT"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "toolarium-enum-configuration"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "toolarium-enum-configuration"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "groupid",
+                        "value": "com.github.toolarium"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "enumeration"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "github"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "toolarium"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-os",
+                        "value": "Windows 11 (10.0), amd64"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-timestamp",
+                        "value": "2023-12-31T19:29:46.744+0100"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "source-compatibility",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "vendor",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "target-compatibility",
+                        "value": "1.8"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "toolarium-enum-configuration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "gradle",
+                        "name": "artifactid",
+                        "value": "toolarium-enum-configuration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "configuration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "configuration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "enumeration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "toolarium"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "toolarium"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-os",
+                        "value": "Windows 11 (10.0), amd64"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "build-timestamp",
+                        "value": "2023-12-31T19:29:46.744+0100"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Title",
+                        "value": "toolarium-enum-configuration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "source-compatibility",
+                        "value": "1.8"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "MEDIUM",
+                        "source": "Manifest",
+                        "name": "specification-title",
+                        "value": "toolarium-enum-configuration"
+                    },
+                    {
+                        "type": "product",
+                        "confidence": "LOW",
+                        "source": "Manifest",
+                        "name": "target-compatibility",
+                        "value": "1.8"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "version",
+                        "value": "1.1.8"
+                    },
+                    {
+                        "type": "version",
+                        "confidence": "HIGH",
+                        "source": "Manifest",
+                        "name": "Implementation-Version",
+                        "value": "1.1.8"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8",
+                    "confidence": "HIGHEST",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ]
+        }
+    ]
+}

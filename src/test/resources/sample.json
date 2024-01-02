@@ -1,0 +1,83 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "9.0.6",
+        "dataSource": [
+            {
+                "name": "NVD API Last Checked",
+                "timestamp": "2024-01-01T07:56:51+01"
+            },
+            {
+                "name": "NVD API Last Modified",
+                "timestamp": "2024-01-01T06:15:08Z"
+            }
+        ]
+    },
+    "projectInfo": {
+        "name": "root project 'toolarium-system-command'",
+        "groupID": "com.github.toolarium",
+        "artifactID": "toolarium-system-command",
+        "version": "0.9.1-SNAPSHOT",
+        "reportDate": "2024-01-01T12:41:44.823341200Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
+        }
+    },
+    "dependencies": [
+        {
+            "isVirtual": false,
+            "fileName": "jackson-annotations-2.15.3.jar",
+            "filePath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-annotations\\2.15.3\\79baf4e605eb3bbb60b1c475d44a7aecceea1d60\\jackson-annotations-2.15.3.jar",
+            "md5": "f478f693731e4a2f0f0d3c7bba119b32",
+            "sha1": "79baf4e605eb3bbb60b1c475d44a7aecceea1d60",
+            "sha256": "aae865c3d88256d61b11523cb1e88bd48d5b9ad5855fa1fc859504fd2204708a",
+            "description": "Core annotations used for value types, used by Jackson data binding package.\n  ",
+            "license": "The Apache Software License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0.txt",
+            "projectReferences": [
+                "toolarium-system-command:annotationProcessor"
+            ],
+            "includedBy": [
+                {
+                    "reference": "pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8"
+                }
+            ],
+            "evidenceCollected": {
+                "vendorEvidence": [
+                    {
+                        "type": "vendor",
+                        "confidence": "HIGH",
+                        "source": "file",
+                        "name": "name",
+                        "value": "jackson-annotations"
+                    }
+                ],
+                "productEvidence": [
+                    {
+                        "type": "product",
+                        "confidence": "HIGHEST",
+                        "source": "jar",
+                        "name": "package name",
+                        "value": "jackson"
+                    }
+                ]
+            },
+            "packages": [
+                {
+                    "id": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.15.3",
+                    "confidence": "HIGH",
+                    "url": "https://ossindex.sonatype.org/component/pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.15.3?utm_source=dependency-check&utm_medium=integration&utm_content=9.0.6"
+                }
+            ],
+            "vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:fasterxml:jackson-modules-java8:2.15.3:*:*:*:*:*:*:*",
+                    "confidence": "LOW"
+                }
+            ]
+        }
+    ]
+}
