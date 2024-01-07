@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/github/license/toolarium/toolarium-dependency-check-util)](https://github.com/toolarium/toolarium-dependency-check-util/blob/master/LICENSE)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.toolarium/toolarium-dependency-check-util/0.0.1)](https://search.maven.org/artifact/com.github.toolarium/toolarium-dependency-check-util/0.0.1/jar)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.toolarium/toolarium-dependency-check-util/0.9.0)](https://search.maven.org/artifact/com.github.toolarium/toolarium-dependency-check-util/0.9.0/jar)
 [![javadoc](https://javadoc.io/badge2/com.github.toolarium/toolarium-dependency-check-util/javadoc.svg)](https://javadoc.io/doc/com.github.toolarium/toolarium-dependency-check-util)
 
 # toolarium-dependency-check-util
@@ -20,7 +20,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ```groovy
 dependencies {
-    implementation "com.github.toolarium:toolarium-dependency-check-util:0.0.1"
+    implementation "com.github.toolarium:toolarium-dependency-check-util:0.9.0"
 }
 ```
 
@@ -30,6 +30,6 @@ dependencies {
 <dependency>
     <groupId>com.github.toolarium</groupId>
     <artifactId>toolarium-dependency-check-util</artifactId>
-    <version>0.0.1</version>
+    <version>0.9.0</version>
 </dependency>
 ```

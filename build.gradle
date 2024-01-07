@@ -12,11 +12,8 @@ apply from: "https://raw.githubusercontent.com/toolarium/common-gradle-build/mas
  ****************************************************************************************/
 dependencies {
     // see https://docs.gradle.org/current/userguide/java_library_plugin.html
-    implementation "com.github.toolarium:toolarium-common:0.4.0"
-
-    // utilities
-    //implementation "net.sf.jptools:jptools:${commonGradleJptoolsVersion}"
-    //implementation "net.sf.jptools:jptools:${commonGradleJptoolsVersion}:slf4j-redirect"
+    implementation "com.github.toolarium:toolarium-common:0.5.0"
+    implementation "com.github.toolarium:toolarium-ansi:0.8.0"
 
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.3'

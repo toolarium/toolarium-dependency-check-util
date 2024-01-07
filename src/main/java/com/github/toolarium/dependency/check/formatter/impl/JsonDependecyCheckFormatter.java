@@ -3,8 +3,9 @@
  *
  * Copyright by toolarium, all rights reserved.
  */
-package com.github.toolarium.dependency.check.formatter;
+package com.github.toolarium.dependency.check.formatter.impl;
 
+import com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
 import com.github.toolarium.dependency.check.util.JSONUtil;
 import java.io.ByteArrayOutputStream;
@@ -21,6 +22,13 @@ import org.slf4j.LoggerFactory;
  */
 public class JsonDependecyCheckFormatter implements IDependencyCheckFormatter<String> {
     private static final Logger LOG = LoggerFactory.getLogger(JsonDependecyCheckFormatter.class);
+
+    
+    /**
+     * Constructor for JsonDependecyCheckFormatter
+     */
+    public JsonDependecyCheckFormatter() {
+    }
 
     
     /**

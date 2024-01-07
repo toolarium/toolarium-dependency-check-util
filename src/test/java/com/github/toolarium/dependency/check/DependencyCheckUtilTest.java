@@ -7,9 +7,9 @@ package com.github.toolarium.dependency.check;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import com.github.toolarium.common.util.TextUtil;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
-import com.github.toolarium.dependency.check.report.format.StringVulnerabilityReportFormatter;
-import com.github.toolarium.dependency.check.util.TextUtil;
+import com.github.toolarium.dependency.check.report.format.VulnerabilityReportFormatterFactory;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -35,8 +35,6 @@ public class DependencyCheckUtilTest {
     
     /** the json file */
     public static final String FULL_REPORT_MULTIPLE_VULNERABILITIES = "dependency-check-report-several.json";
-
-    
     
     private static final Logger LOG = LoggerFactory.getLogger(DependencyCheckUtilTest.class);
 
@@ -96,7 +94,8 @@ public class DependencyCheckUtilTest {
         
         LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
 
-        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, new StringVulnerabilityReportFormatter(), "annotationProcessor");
+        
+        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "annotationProcessor");
         LOG.debug(TextUtil.NL + result);
     }
 
@@ -111,6 +110,6 @@ public class DependencyCheckUtilTest {
         DependecyCheckResult dependecyCheckResult = DependencyCheckUtil.getInstance().readFile(Paths.get(TEST_RESOURCE_PATH, FULL_REPORT_1_VULNERABLE).toFile());
         assertNotNull(dependecyCheckResult);
         
-        LOG.debug(TextUtil.NL + DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, new StringVulnerabilityReportFormatter(), new String[] {"annotationProcessor"}));
+        LOG.debug(TextUtil.NL + DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), new String[] {"annotationProcessor"}));
     }
 }

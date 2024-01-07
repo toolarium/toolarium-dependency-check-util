@@ -5,8 +5,7 @@
  */
 package com.github.toolarium.dependency.check;
 
-import com.github.toolarium.dependency.check.formatter.JsonDependecyCheckFormatter;
-import com.github.toolarium.dependency.check.formatter.VulnerabilityReportDependecyCheckFormatter;
+import com.github.toolarium.dependency.check.formatter.DependencyCheckFormatterFactory;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
 import com.github.toolarium.dependency.check.model.Dependency;
 import com.github.toolarium.dependency.check.model.vulnerability.VulnerabilityId;
@@ -130,7 +129,6 @@ public final class DependencyCheckUtil {
             //d.setDescription(null);
             //d.setLicense(null);
             d.setEvidenceCollected(null);
-
             dependencies.add(d);
         }
 
@@ -180,7 +178,7 @@ public final class DependencyCheckUtil {
      * @throws IOException In case of a file read error
      */
     public VulnerabilityReport toVulnerabilityReport(DependecyCheckResult dependecyCheckResult) {
-        return new VulnerabilityReportDependecyCheckFormatter().format(dependecyCheckResult);
+        return DependencyCheckFormatterFactory.getInstance().getVulnerabilityReportDependecyCheckFormatter().format(dependecyCheckResult);
     }
 
     
@@ -295,6 +293,6 @@ public final class DependencyCheckUtil {
      * @throws IOException In case of a file read error
      */
     public String toJsonString(DependecyCheckResult dependecyCheckResult) {
-        return new JsonDependecyCheckFormatter().format(dependecyCheckResult);
+        return DependencyCheckFormatterFactory.getInstance().getJsonDependecyCheckFormatter().format(dependecyCheckResult);
     }
 }
