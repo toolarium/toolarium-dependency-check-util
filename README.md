@@ -1,10 +1,13 @@
 [![License](https://img.shields.io/github/license/toolarium/toolarium-dependency-check-util)](https://github.com/toolarium/toolarium-dependency-check-util/blob/master/LICENSE)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.toolarium/toolarium-dependency-check-util/0.9.0)](https://search.maven.org/artifact/com.github.toolarium/toolarium-dependency-check-util/0.9.0/jar)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.toolarium/toolarium-dependency-check-util/1.0.0)](https://search.maven.org/artifact/com.github.toolarium/toolarium-dependency-check-util/1.0.0/jar)
 [![javadoc](https://javadoc.io/badge2/com.github.toolarium/toolarium-dependency-check-util/javadoc.svg)](https://javadoc.io/doc/com.github.toolarium/toolarium-dependency-check-util)
 
 # toolarium-dependency-check-util
 
-Java library with some common missing java data structures and helpers.
+The [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/) is a great tool but on command line it don't illustrate important information.
+This java libraray takes a OWASP Dependency-Check json report and summarize the result.
+
+The library is integrated and used by the [common gradle build](https://github.com/toolarium/common-gradle-build).
 
 
 ## Built With
@@ -20,7 +23,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ```groovy
 dependencies {
-    implementation "com.github.toolarium:toolarium-dependency-check-util:0.9.0"
+    implementation "com.github.toolarium:toolarium-dependency-check-util:1.0.0"
 }
 ```
 
@@ -30,6 +33,6 @@ dependencies {
 <dependency>
     <groupId>com.github.toolarium</groupId>
     <artifactId>toolarium-dependency-check-util</artifactId>
-    <version>0.9.0</version>
+    <version>1.0.0</version>
 </dependency>
 ```
