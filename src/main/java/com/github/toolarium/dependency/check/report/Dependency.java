@@ -209,6 +209,20 @@ public class Dependency {
     
 
     /**
+     * Get the most critical vulnerability
+     *
+     * @return the most critical vulnerability
+     */
+    public Vulnerability getMostCrititcalVulnerability() {
+        if (vulnerabilityList != null && !vulnerabilityList.isEmpty()) {
+            return vulnerabilityList.get(0);
+        }
+        
+        return null;
+    }
+
+    
+    /**
      * Get the vulnerability list
      *
      * @return the vulnerability list
