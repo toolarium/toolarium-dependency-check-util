@@ -5,12 +5,13 @@
  */
 package com.github.toolarium.dependency.check;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.github.toolarium.ansi.AnsiColor;
 import com.github.toolarium.common.util.TextUtil;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
-import com.github.toolarium.dependency.check.report.Vulnerability;
 import com.github.toolarium.dependency.check.report.VulnerabilityReport;
 import com.github.toolarium.dependency.check.report.format.VulnerabilityReportFormatterFactory;
 import com.github.toolarium.dependency.check.report.format.impl.AnsiStringVulnerabilityReportFormatter;
@@ -28,6 +29,8 @@ import org.slf4j.LoggerFactory;
  * @author patrick
  */
 public class DependencyCheckUtilTest {
+    private static final String RUNTIME_RELEVANT_CONFIGURATION = "api, implementation, runtimeOnly, runtimeClasspath";
+
     /** Defines the resource */
     public static final String TEST_RESOURCE_PATH = "src/test/resources";
     
@@ -101,9 +104,10 @@ public class DependencyCheckUtilTest {
         //LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
         
         List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "annotationProcessor");
+        assertFalse(result.isEmpty());
         LOG.debug(TextUtil.NL + result);
         
-        logVolunerabilities(simplifiedDependecyCheckResult);
+        logVolunerabilities(simplifiedDependecyCheckResult, RUNTIME_RELEVANT_CONFIGURATION);
     }
 
 
@@ -121,10 +125,16 @@ public class DependencyCheckUtilTest {
         assertNotNull(simplifiedDependecyCheckResult);
         //LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
 
-        //List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "annotationProcessor");
+        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "annotationProcessor");
+        assertTrue(result.isEmpty());
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "modelGenerator");
+        assertFalse(result.isEmpty());
         //LOG.debug(TextUtil.NL + result);
-        
-        logVolunerabilities(dependecyCheckResult);
+
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), RUNTIME_RELEVANT_CONFIGURATION);
+        assertTrue(result.isEmpty());
+
+        logVolunerabilities(simplifiedDependecyCheckResult, "modelGenerator");
     }
 
     
@@ -148,8 +158,8 @@ public class DependencyCheckUtilTest {
      * 
      * @param dependecyCheckResult the result to log
      */
-    protected void logVolunerabilities(DependecyCheckResult dependecyCheckResult) {
-        String[] filter = "api, implementation, runtimeOnly, runtimeClasspath".split(",");
+    protected void logVolunerabilities(DependecyCheckResult dependecyCheckResult, String configuration) {
+        String[] filter = configuration.split(",");
         for (int i = 0; i < filter.length; i++) {
             filter[i] = filter[i].trim();
         }
