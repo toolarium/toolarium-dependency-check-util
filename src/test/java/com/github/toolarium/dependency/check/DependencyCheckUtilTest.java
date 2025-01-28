@@ -29,8 +29,6 @@ import org.slf4j.LoggerFactory;
  * @author patrick
  */
 public class DependencyCheckUtilTest {
-    private static final String RUNTIME_RELEVANT_CONFIGURATION = "api, implementation, runtimeOnly, runtimeClasspath";
-
     /** Defines the resource */
     public static final String TEST_RESOURCE_PATH = "src/test/resources";
     
@@ -46,6 +44,7 @@ public class DependencyCheckUtilTest {
     /** the json file */
     public static final String FULL_REPORT_MULTIPLE_VULNERABILITIES_CVSSV2 = "dependency-check-report-several2.json";
 
+    private static final String RUNTIME_RELEVANT_CONFIGURATION = "api, implementation, runtimeOnly, runtimeClasspath";
     private static final Logger LOG = LoggerFactory.getLogger(DependencyCheckUtilTest.class);
 
     
