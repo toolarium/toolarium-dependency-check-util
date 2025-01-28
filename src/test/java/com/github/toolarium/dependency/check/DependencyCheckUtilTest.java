@@ -155,6 +155,7 @@ public class DependencyCheckUtilTest {
     /**
      * Log vulnerability
      * 
+     * @param configuration the configuration
      * @param dependecyCheckResult the result to log
      */
     protected void logVolunerabilities(DependecyCheckResult dependecyCheckResult, String configuration) {
