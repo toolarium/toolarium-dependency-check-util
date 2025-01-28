@@ -145,6 +145,7 @@ public final class DependencyCheckUtil {
     public DependecyCheckResult filter(DependecyCheckResult dependecyCheckResult) {
         DependecyCheckResult simplifiedDependecyCheckResult = new DependecyCheckResult();
         List<Dependency> dependencies = new ArrayList<Dependency>();
+        simplifiedDependecyCheckResult.setProjectInfo(dependecyCheckResult.getProjectInfo());
         simplifiedDependecyCheckResult.setDependencies(dependencies);
         for (Dependency d : dependecyCheckResult.getDependencies()) {
             if (d.getProjectReferences() != null && !d.getProjectReferences().isEmpty()) {
