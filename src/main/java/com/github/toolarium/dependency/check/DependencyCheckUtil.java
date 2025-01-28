@@ -159,7 +159,7 @@ public final class DependencyCheckUtil {
                         }
                     }
     
-                    if (!relevantIds.isEmpty()) {
+                    if (!relevantIds.isEmpty() && d.getVulnerabilities() != null && !d.getVulnerabilities().isEmpty()) {
                         d.setVulnerabilityIds(relevantIds);
                         dependencies.add(d);
                     }
