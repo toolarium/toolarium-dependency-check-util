@@ -6,9 +6,11 @@
 package com.github.toolarium.dependency.check;
 
 import com.github.toolarium.dependency.check.formatter.DependencyCheckFormatterFactory;
+import com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter.DependencyFilter;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
 import com.github.toolarium.dependency.check.model.Dependency;
 import com.github.toolarium.dependency.check.model.vulnerability.VulnerabilityId;
+import com.github.toolarium.dependency.check.report.DependencyCheckFilter;
 import com.github.toolarium.dependency.check.report.VulnerabilityReport;
 import com.github.toolarium.dependency.check.report.format.IVulnerabilityReportFormatter;
 import com.github.toolarium.dependency.check.util.JSONUtil;
@@ -108,7 +110,7 @@ public final class DependencyCheckUtil {
 
 
     /**
-     * Simplify a dependecy check result and remove attributes.
+     * Simplify a dependency check result and remove attributes.
      *
      * @param dependecyCheckResult the dependency check result
      * @return the filtered and simplified dependency check result
@@ -170,16 +172,55 @@ public final class DependencyCheckUtil {
         return simplifiedDependecyCheckResult;
     }
 
+    
+    /**
+     * Filter out not relevant findings
+     *
+     * @param inputDependecyCheckResult the dependency check result
+     * @param filter the dependency check filter
+     * @return the filtered and simplified dependency check result
+     */
+    public DependecyCheckResult filter(DependecyCheckResult inputDependecyCheckResult, DependencyCheckFilter filter) {
+        DependecyCheckResult dependecyCheckResult = new DependecyCheckResult();
+        List<Dependency> dependencies = new ArrayList<Dependency>();
+        dependecyCheckResult.setProjectInfo(inputDependecyCheckResult.getProjectInfo());
+        dependecyCheckResult.setDependencies(dependencies);
+        for (Dependency d : inputDependecyCheckResult.getDependencies()) {
+            
+            
+            if (d.getProjectReferences() != null && !d.getProjectReferences().isEmpty()) {
+                if (d.getVulnerabilityIds() != null && !d.getVulnerabilityIds().isEmpty()) {
+                    List<VulnerabilityId> relevantIds = new ArrayList<VulnerabilityId>();
+                    for (VulnerabilityId id : d.getVulnerabilityIds()) {
+                        if (id.getConfidence() == null || id.getConfidence().isBlank() || "LOW".equalsIgnoreCase(id.getConfidence())) {
+                            // ignore result
+                        } else {
+                            relevantIds.add(id);
+                        }
+                    }
+    
+                    if (!relevantIds.isEmpty() && d.getVulnerabilities() != null && !d.getVulnerabilities().isEmpty()) {
+                        d.setVulnerabilityIds(relevantIds);
+                        dependencies.add(d);
+                    }
+                }
+            }
+        }
+
+        return dependecyCheckResult;
+    }
+
 
     /**
      * Format a dependency check result into a vulnerability report 
      *
      * @param dependecyCheckResult the dependency check result to write
+     * @param dependencyFilter the dependency filter
      * @return the vulnerability report
      * @throws IOException In case of a file read error
      */
-    public VulnerabilityReport toVulnerabilityReport(DependecyCheckResult dependecyCheckResult) {
-        return DependencyCheckFormatterFactory.getInstance().getVulnerabilityReportDependecyCheckFormatter().format(dependecyCheckResult);
+    public VulnerabilityReport toVulnerabilityReport(DependecyCheckResult dependecyCheckResult, DependencyFilter dependencyFilter) {
+        return DependencyCheckFormatterFactory.getInstance().getVulnerabilityReportDependecyCheckFormatter().format(dependecyCheckResult, dependencyFilter);
     }
 
     
@@ -189,11 +230,12 @@ public final class DependencyCheckUtil {
      * @param <T> the generic type
      * @param dependecyCheckResult the dependency check result to write
      * @param formatter the formatter
+     * @param dependencyFilter the dependency filter
      * @return the string representation of the object
      * @throws IOException In case of a file read error
      */
-    public <T> List<T> formatRuntimeRelevantVulneabilityReport(DependecyCheckResult dependecyCheckResult, IVulnerabilityReportFormatter<T> formatter) {
-        return formatVulneabilityReport(toVulnerabilityReport(dependecyCheckResult), formatter, RUNTIME_FILTER);
+    public <T> List<T> formatRuntimeRelevantVulneabilityReport(DependecyCheckResult dependecyCheckResult, IVulnerabilityReportFormatter<T> formatter, DependencyFilter dependencyFilter) {
+        return formatVulneabilityReport(toVulnerabilityReport(dependecyCheckResult, dependencyFilter), formatter, RUNTIME_FILTER);
     }    
 
     
@@ -217,11 +259,12 @@ public final class DependencyCheckUtil {
      * @param <T> the generic type
      * @param dependecyCheckResult the dependency check result to write
      * @param formatter the formatter
+     * @param dependencyFilter the dependency filter
      * @return the string representation of the object
      * @throws IOException In case of a file read error
      */
-    public <T> List<T> formatVulneabilityReport(DependecyCheckResult dependecyCheckResult, IVulnerabilityReportFormatter<T> formatter) {
-        return formatVulneabilityReport(toVulnerabilityReport(dependecyCheckResult), formatter);
+    public <T> List<T> formatVulneabilityReport(DependecyCheckResult dependecyCheckResult, IVulnerabilityReportFormatter<T> formatter, DependencyFilter dependencyFilter) {
+        return formatVulneabilityReport(toVulnerabilityReport(dependecyCheckResult, dependencyFilter), formatter);
     }    
 
     
@@ -245,12 +288,13 @@ public final class DependencyCheckUtil {
      * @param <T> the generic type
      * @param dependecyCheckResult the dependency check result to write
      * @param formatter the formatter
+     * @param dependencyFilter the dependency filter
      * @param configurationFilter the configuration filter or null to format all configurations
      * @return the string representation of the object
      * @throws IOException In case of a file read error
      */
-    public <T> List<T> formatVulneabilityReport(DependecyCheckResult dependecyCheckResult, IVulnerabilityReportFormatter<T> formatter, String... configurationFilter) {
-        return formatVulneabilityReport(toVulnerabilityReport(dependecyCheckResult), formatter, configurationFilter);
+    public <T> List<T> formatVulneabilityReport(DependecyCheckResult dependecyCheckResult, IVulnerabilityReportFormatter<T> formatter, DependencyFilter dependencyFilter, String... configurationFilter) {
+        return formatVulneabilityReport(toVulnerabilityReport(dependecyCheckResult, dependencyFilter), formatter, configurationFilter);
     }    
 
     
@@ -294,6 +338,6 @@ public final class DependencyCheckUtil {
      * @throws IOException In case of a file read error
      */
     public String toJsonString(DependecyCheckResult dependecyCheckResult) {
-        return DependencyCheckFormatterFactory.getInstance().getJsonDependecyCheckFormatter().format(dependecyCheckResult);
+        return DependencyCheckFormatterFactory.getInstance().getJsonDependecyCheckFormatter().format(dependecyCheckResult, null);
     }
 }

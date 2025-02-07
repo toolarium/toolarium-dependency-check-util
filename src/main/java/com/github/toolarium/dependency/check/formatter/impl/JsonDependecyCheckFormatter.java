@@ -30,12 +30,12 @@ public class JsonDependecyCheckFormatter implements IDependencyCheckFormatter<St
     public JsonDependecyCheckFormatter() {
     }
 
-    
+
     /**
-     * @see com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter#format(com.github.toolarium.dependency.check.model.DependecyCheckResult)
+     * @see com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter#format(com.github.toolarium.dependency.check.model.DependecyCheckResult, com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter.DependencyFilter)
      */
     @Override
-    public String format(DependecyCheckResult dependecyCheckResult) {
+    public String format(DependecyCheckResult dependecyCheckResult, DependencyFilter dependencyFilter) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         try {
             JSONUtil.getInstance().write(dependecyCheckResult, stream);

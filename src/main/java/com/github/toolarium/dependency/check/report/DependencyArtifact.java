@@ -5,7 +5,9 @@
  */
 package com.github.toolarium.dependency.check.report;
 
+import com.github.toolarium.common.util.StringUtil;
 import java.util.Objects;
+
 
 /**
  * Defines the dependency artifact
@@ -140,5 +142,47 @@ public class DependencyArtifact {
     @Override
     public String toString() {
         return "DependencyArtefact [groupId=" + groupId + ", name=" + name + ", version=" + version + "]";
+    }
+
+
+    /**
+     * Parse artifact id
+     *
+     * @param input the id
+     * @return the parsed artifact
+     */
+    public static DependencyArtifact toDependencyArtifact(String input) {
+        if (input == null || input.isBlank()) {
+            return null;
+        }
+        
+        if (StringUtil.getInstance().countCharacters(input, ':') == 2) {
+            String[] split = input.trim().split(":"); // com.github.toolarium:toolarium-enum-configuration:1.1.8
+            if (split.length > 2) {
+                String groupId = split[0];
+                String name = split[1];
+                String version = split[2];
+                return new DependencyArtifact(groupId, name, version);
+            }
+        }
+
+        if (StringUtil.getInstance().countCharacters(input, '/') == 2) {
+            String[] split = input.trim().split("/"); // pkg:maven/com.github.toolarium/toolarium-enum-configuration@1.1.8
+            if (split.length > 2) {
+                String groupId = split[1];
+                String name = split[2];
+                String version = "";
+                
+                int idx = name.indexOf("@");
+                if (idx > 0) {
+                    version = name.substring(idx + 1);
+                    name = name.substring(0, idx);
+                }
+                
+                return new DependencyArtifact(groupId, name, version);
+            }
+        }
+        
+        return null;
     }
 }

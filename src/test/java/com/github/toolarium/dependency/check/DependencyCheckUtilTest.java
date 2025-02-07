@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.github.toolarium.ansi.AnsiColor;
 import com.github.toolarium.common.util.TextUtil;
+import com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter.DependencyFilter;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
 import com.github.toolarium.dependency.check.report.VulnerabilityReport;
 import com.github.toolarium.dependency.check.report.format.VulnerabilityReportFormatterFactory;
@@ -83,7 +84,7 @@ public class DependencyCheckUtilTest {
         DependecyCheckResult simplifiedDependecyCheckResult = DependencyCheckUtil.getInstance().filter(DependencyCheckUtil.getInstance().simplify(dependecyCheckResult));
         assertNotNull(simplifiedDependecyCheckResult);
         
-        LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
+        //LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
         DependencyCheckUtil.getInstance().writeFile("build/" + FULL_REPORT_1_VULNERABLE, simplifiedDependecyCheckResult);
     }
 
@@ -101,12 +102,15 @@ public class DependencyCheckUtilTest {
         DependecyCheckResult simplifiedDependecyCheckResult = DependencyCheckUtil.getInstance().filter(DependencyCheckUtil.getInstance().simplify(dependecyCheckResult));
         assertNotNull(simplifiedDependecyCheckResult);
         //LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
-        
-        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "annotationProcessor");
+
+        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, "annotationProcessor");
+        assertTrue(result.isEmpty());
+
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.ALL, "annotationProcessor");
         assertFalse(result.isEmpty());
         LOG.debug(TextUtil.NL + result);
         
-        logVolunerabilities(simplifiedDependecyCheckResult, RUNTIME_RELEVANT_CONFIGURATION);
+        logVolunerabilities(simplifiedDependecyCheckResult, RUNTIME_RELEVANT_CONFIGURATION, DependencyFilter.DIRECT);
     }
 
 
@@ -122,20 +126,46 @@ public class DependencyCheckUtilTest {
 
         DependecyCheckResult simplifiedDependecyCheckResult = DependencyCheckUtil.getInstance().filter(DependencyCheckUtil.getInstance().simplify(dependecyCheckResult));
         assertNotNull(simplifiedDependecyCheckResult);
-        //LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
+        LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
 
-        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "annotationProcessor");
+        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, "annotationProcessor");
         assertTrue(result.isEmpty());
-        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), "modelGenerator");
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, "modelGenerator");
         assertFalse(result.isEmpty());
         //LOG.debug(TextUtil.NL + result);
 
-        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), RUNTIME_RELEVANT_CONFIGURATION);
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, RUNTIME_RELEVANT_CONFIGURATION);
         assertTrue(result.isEmpty());
 
-        logVolunerabilities(simplifiedDependecyCheckResult, "modelGenerator");
+        logVolunerabilities(simplifiedDependecyCheckResult, "modelGenerator", DependencyFilter.DIRECT);
     }
+    
+    
+    /**
+     * Test
+     * 
+     * @throws IOException In case of a file error
+     */
+    @Test
+    public void formatMoreComplexCase3() throws IOException {
+        DependecyCheckResult dependecyCheckResult = DependencyCheckUtil.getInstance().readFile(Paths.get(TEST_RESOURCE_PATH, "dependency-check-report.json").toFile());
+        assertNotNull(dependecyCheckResult);
 
+        DependecyCheckResult simplifiedDependecyCheckResult = DependencyCheckUtil.getInstance().filter(DependencyCheckUtil.getInstance().simplify(dependecyCheckResult));
+        assertNotNull(simplifiedDependecyCheckResult);
+        //LOG.debug("" + DependencyCheckUtil.getInstance().toJsonString(simplifiedDependecyCheckResult));
+
+        List<String> result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, "annotationProcessor");
+        assertTrue(result.isEmpty());
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, "modelGenerator");
+        assertFalse(result.isEmpty());
+        //LOG.debug(TextUtil.NL + result);
+
+        result = DependencyCheckUtil.getInstance().formatVulneabilityReport(simplifiedDependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, RUNTIME_RELEVANT_CONFIGURATION);
+        assertTrue(result.isEmpty());
+
+        logVolunerabilities(simplifiedDependecyCheckResult, "modelGenerator", DependencyFilter.ALL);
+    }
     
     
     /**
@@ -148,24 +178,26 @@ public class DependencyCheckUtilTest {
         DependecyCheckResult dependecyCheckResult = DependencyCheckUtil.getInstance().readFile(Paths.get(TEST_RESOURCE_PATH, FULL_REPORT_1_VULNERABLE).toFile());
         assertNotNull(dependecyCheckResult);
         
-        LOG.debug(TextUtil.NL + DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), new String[] {"annotationProcessor"}));
+        LOG.debug(TextUtil.NL + DependencyCheckUtil.getInstance().formatVulneabilityReport(dependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.DIRECT, new String[] {"annotationProcessor"}));
     }
-
+    
 
     /**
      * Log vulnerability
      * 
      * @param configuration the configuration
      * @param dependecyCheckResult the result to log
+     * @param dependencyFilter the dependency filter
      */
-    protected void logVolunerabilities(DependecyCheckResult dependecyCheckResult, String configuration) {
+    protected void logVolunerabilities(DependecyCheckResult dependecyCheckResult, String configuration, DependencyFilter dependencyFilter) {
         String[] filter = configuration.split(",");
         for (int i = 0; i < filter.length; i++) {
             filter[i] = filter[i].trim();
         }
        
         AnsiStringVulnerabilityReportFormatter f = VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(AnsiColor.ON);
-        VulnerabilityReport vulnerabilityReport = DependencyCheckUtil.getInstance().toVulnerabilityReport(dependecyCheckResult);
+        f.setMaxTextLen(72);
+        VulnerabilityReport vulnerabilityReport = DependencyCheckUtil.getInstance().toVulnerabilityReport(dependecyCheckResult, dependencyFilter);
         for (String s : DependencyCheckUtil.getInstance().formatVulneabilityReport(vulnerabilityReport, f, filter)) {
             LOG.debug(TextUtil.NL + s);
         }

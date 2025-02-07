@@ -18,8 +18,18 @@ public interface IDependencyCheckFormatter<T> {
     /**
      * Format a dependency check result
      *
-     * @param dependecyCheckResult the dependecy check result
+     * @param dependecyCheckResult the dependency check result
+     * @param dependencyFilter the dependency filter
      * @return the formatted type
      */
-    T format(DependecyCheckResult dependecyCheckResult);
+    T format(DependecyCheckResult dependecyCheckResult, DependencyFilter dependencyFilter);
+    
+    
+    /**
+     * Defines the dependency filter
+     */
+    enum DependencyFilter {
+        DIRECT,
+        ALL
+    }
 }
