@@ -183,8 +183,44 @@ public class DependencyCheckUtilTest {
     
 
     /**
+     * Test formatRuntimeRelevantVulneabilityReport with a DependecyCheckResult — the
+     * annotationProcessor configuration is not in the runtime filter so the result is empty.
+     *
+     * @throws IOException In case of a file error
+     */
+    @Test
+    public void formatRuntimeRelevantFromResult() throws IOException {
+        DependecyCheckResult dependecyCheckResult = DependencyCheckUtil.getInstance().readFile(
+                Paths.get(TEST_RESOURCE_PATH, FULL_REPORT_1_VULNERABLE).toFile());
+        assertNotNull(dependecyCheckResult);
+
+        List<String> result = DependencyCheckUtil.getInstance().formatRuntimeRelevantVulneabilityReport(
+                dependecyCheckResult, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter(), DependencyFilter.ALL);
+        assertTrue(result.isEmpty());
+    }
+
+
+    /**
+     * Test formatRuntimeRelevantVulneabilityReport with a VulnerabilityReport overload.
+     *
+     * @throws IOException In case of a file error
+     */
+    @Test
+    public void formatRuntimeRelevantFromReport() throws IOException {
+        DependecyCheckResult dependecyCheckResult = DependencyCheckUtil.getInstance().readFile(
+                Paths.get(TEST_RESOURCE_PATH, FULL_REPORT_1_VULNERABLE).toFile());
+        assertNotNull(dependecyCheckResult);
+
+        VulnerabilityReport vulnerabilityReport = DependencyCheckUtil.getInstance().toVulnerabilityReport(dependecyCheckResult, DependencyFilter.ALL);
+        List<String> result = DependencyCheckUtil.getInstance().formatRuntimeRelevantVulneabilityReport(
+                vulnerabilityReport, VulnerabilityReportFormatterFactory.getInstance().getStringFormatter());
+        assertTrue(result.isEmpty());
+    }
+
+
+    /**
      * Log vulnerability
-     * 
+     *
      * @param configuration the configuration
      * @param dependecyCheckResult the result to log
      * @param dependencyFilter the dependency filter

@@ -6,8 +6,10 @@
 package com.github.toolarium.dependency.check.report;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 
 /**
@@ -23,6 +25,7 @@ public class Dependency {
     private String confidence;
     private String url;
     private List<String> projectReferenceList;
+    private transient Set<String> projectReferenceSet;
     private List<DependencyArtifact> includedByReferenceList;
     private List<Vulnerability> vulnerabilityList;
 
@@ -33,6 +36,7 @@ public class Dependency {
      */
     public Dependency() {
         projectReferenceList = new ArrayList<String>();
+        projectReferenceSet = new HashSet<String>();
     }
     
     
@@ -172,7 +176,13 @@ public class Dependency {
      * @param projectReferenceList the project reference list
      */
     public void setProjectReferenceList(List<String> projectReferenceList) {
-        this.projectReferenceList = projectReferenceList;
+        if (projectReferenceList != null) {
+            this.projectReferenceList = new ArrayList<String>(projectReferenceList);
+            this.projectReferenceSet = new HashSet<String>(projectReferenceList);
+        } else {
+            this.projectReferenceList = new ArrayList<String>();
+            this.projectReferenceSet = new HashSet<String>();
+        }
     }
 
     
@@ -202,7 +212,7 @@ public class Dependency {
      * @param projectReference the project reference to add
      */
     public void addProjectReferenceList(String projectReference) {
-        if (!this.projectReferenceList.contains(projectReference)) {
+        if (projectReferenceSet.add(projectReference)) {
             this.projectReferenceList.add(projectReference);
         }
     }

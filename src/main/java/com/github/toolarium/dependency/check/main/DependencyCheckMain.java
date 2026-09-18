@@ -83,7 +83,15 @@ public class DependencyCheckMain {
                 simplify = true;
                 idx++;
             } else if (FILTER.equals(args[idx]) && idx + 1 < args.length) {
-                dependencyFilter = DependencyFilter.valueOf(args[idx + 1].toUpperCase());
+                try {
+                    dependencyFilter = DependencyFilter.valueOf(args[idx + 1].toUpperCase());
+                } catch (IllegalArgumentException e) {
+                    logToConsole(new AnsiStringBuilder()
+                            .color(ForegroundColor.RED, "Invalid filter value: ")
+                            .bold(args[idx + 1])
+                            .color(ForegroundColor.RED, ". Valid values: ALL, DIRECT")
+                            .toString());
+                }
                 idx += 2;
             } else if (CONFIGURATION.equals(args[idx]) && idx + 1 < args.length) {
                 configuration = args[idx + 1];

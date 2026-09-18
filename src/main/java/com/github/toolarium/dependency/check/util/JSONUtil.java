@@ -42,7 +42,11 @@ public final class JSONUtil {
      * Constructor
      */
     private JSONUtil() {
-        // NOP
+        objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
+        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+        objectMapper.enable(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS);
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
     }
 
 
@@ -79,9 +83,7 @@ public final class JSONUtil {
                 return null;
             }
 
-            IOException ex = new IOException(e.getMessage());
-            ex.setStackTrace(e.getStackTrace());
-            throw ex;
+            throw new IOException(e.getMessage(), e);
         } catch (IOException e) {
             throw e;
         }
@@ -104,9 +106,7 @@ public final class JSONUtil {
         try {
             getMapper().writerWithDefaultPrettyPrinter().writeValue(outputStream, type);
         } catch (JsonMappingException | JsonParseException e) {
-            IOException ex = new IOException(e.getMessage());
-            ex.setStackTrace(e.getStackTrace());
-            throw ex;
+            throw new IOException(e.getMessage(), e);
         }
     }
 
@@ -119,6 +119,9 @@ public final class JSONUtil {
      * @throws IllegalArgumentException In case of invalid json format
      */
     public String convert(Collection<String> inputList) throws IllegalArgumentException {
+        if (inputList == null) {
+            return "[]";
+        }
 
         try {
             List<String> list = new ArrayList<String>();
@@ -178,13 +181,6 @@ public final class JSONUtil {
      * @return the object mapper
      */
     private ObjectMapper getMapper() {
-        if (objectMapper == null) {
-            objectMapper = new ObjectMapper();
-            objectMapper.registerModule(new JavaTimeModule());
-            objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-            objectMapper.enable(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS);
-            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
-        }
         return objectMapper;
     }
 }

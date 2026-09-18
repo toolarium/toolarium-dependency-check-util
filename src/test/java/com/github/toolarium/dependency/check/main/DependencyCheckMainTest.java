@@ -139,6 +139,17 @@ public class DependencyCheckMainTest {
 
 
     /**
+     * Test invalid --filter value produces an error message.
+     */
+    @Test
+    public void testInvalidFilterValue() {
+        String file = Paths.get(DependencyCheckUtilTest.TEST_RESOURCE_PATH, DependencyCheckUtilTest.FULL_REPORT_1_VULNERABLE).toString();
+        String output = run("--filter", "INVALID_VALUE", file);
+        assertTrue(output.contains("Invalid filter value"));
+    }
+
+
+    /**
      * Test multiple arguments combined.
      */
     @Test

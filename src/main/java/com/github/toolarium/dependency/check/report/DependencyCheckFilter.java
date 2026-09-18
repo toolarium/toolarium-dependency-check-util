@@ -47,5 +47,16 @@ public class DependencyCheckFilter {
             whitelist.add(dependencyArtifact);
         }
     }
+
+
+    /**
+     * Check if a dependency artifact is whitelisted (accepted/suppressed)
+     *
+     * @param dependencyArtifact the dependency artifact to check
+     * @return true if the artifact is in the whitelist
+     */
+    public boolean isWhitelisted(DependencyArtifact dependencyArtifact) {
+        return dependencyArtifact != null && whitelist.contains(dependencyArtifact);
+    }
 }
 

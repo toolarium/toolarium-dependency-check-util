@@ -9,7 +9,9 @@ import com.github.toolarium.dependency.check.formatter.DependencyCheckFormatterF
 import com.github.toolarium.dependency.check.formatter.IDependencyCheckFormatter.DependencyFilter;
 import com.github.toolarium.dependency.check.model.DependecyCheckResult;
 import com.github.toolarium.dependency.check.model.Dependency;
+import com.github.toolarium.dependency.check.model.Package;
 import com.github.toolarium.dependency.check.model.vulnerability.VulnerabilityId;
+import com.github.toolarium.dependency.check.report.DependencyArtifact;
 import com.github.toolarium.dependency.check.report.DependencyCheckFilter;
 import com.github.toolarium.dependency.check.report.VulnerabilityReport;
 import com.github.toolarium.dependency.check.report.format.IVulnerabilityReportFormatter;
@@ -80,8 +82,9 @@ public final class DependencyCheckUtil {
      * @throws IOException In case of a file read error
      */
     public DependecyCheckResult readFile(File file) throws IOException {
-        DependecyCheckResult result = JSONUtil.getInstance().read(DependecyCheckResult.class, new FileInputStream(file));
-        return result;
+        try (FileInputStream fis = new FileInputStream(file)) {
+            return JSONUtil.getInstance().read(DependecyCheckResult.class, fis);
+        }
     }
 
     
@@ -105,7 +108,9 @@ public final class DependencyCheckUtil {
      * @throws IOException In case of a file read error
      */
     public void writeFile(File file, DependecyCheckResult dependecyCheckResult) throws IOException {
-        JSONUtil.getInstance().write(dependecyCheckResult, new FileOutputStream(file));
+        try (FileOutputStream fos = new FileOutputStream(file)) {
+            JSONUtil.getInstance().write(dependecyCheckResult, fos);
+        }
     }
 
 
@@ -186,8 +191,10 @@ public final class DependencyCheckUtil {
         dependecyCheckResult.setProjectInfo(inputDependecyCheckResult.getProjectInfo());
         dependecyCheckResult.setDependencies(dependencies);
         for (Dependency d : inputDependecyCheckResult.getDependencies()) {
-            
-            
+            if (filter != null && isWhitelisted(d, filter)) {
+                continue;
+            }
+
             if (d.getProjectReferences() != null && !d.getProjectReferences().isEmpty()) {
                 if (d.getVulnerabilityIds() != null && !d.getVulnerabilityIds().isEmpty()) {
                     List<VulnerabilityId> relevantIds = new ArrayList<VulnerabilityId>();
@@ -198,7 +205,7 @@ public final class DependencyCheckUtil {
                             relevantIds.add(id);
                         }
                     }
-    
+
                     if (!relevantIds.isEmpty() && d.getVulnerabilities() != null && !d.getVulnerabilities().isEmpty()) {
                         d.setVulnerabilityIds(relevantIds);
                         dependencies.add(d);
@@ -208,6 +215,27 @@ public final class DependencyCheckUtil {
         }
 
         return dependecyCheckResult;
+    }
+
+
+    /**
+     * Check if any package of a dependency is whitelisted
+     *
+     * @param dependency the model dependency
+     * @param filter the filter containing the whitelist
+     * @return true if at least one package matches a whitelisted artifact
+     */
+    private boolean isWhitelisted(Dependency dependency, DependencyCheckFilter filter) {
+        if (dependency.getPackages() == null) {
+            return false;
+        }
+        for (Package pkg : dependency.getPackages()) {
+            DependencyArtifact artifact = DependencyArtifact.toDependencyArtifact(pkg.getId());
+            if (filter.isWhitelisted(artifact)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 

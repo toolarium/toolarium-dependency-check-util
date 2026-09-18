@@ -10,7 +10,7 @@ import com.github.toolarium.dependency.check.model.DependecyCheckResult;
 import com.github.toolarium.dependency.check.util.JSONUtil;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +39,7 @@ public class JsonDependecyCheckFormatter implements IDependencyCheckFormatter<St
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         try {
             JSONUtil.getInstance().write(dependecyCheckResult, stream);
-            return new String(stream.toString(Charset.defaultCharset()));
+            return stream.toString(StandardCharsets.UTF_8);
         } catch (IOException e) {
             LOG.warn("Could not format: " + e.getMessage(), e);
         }
